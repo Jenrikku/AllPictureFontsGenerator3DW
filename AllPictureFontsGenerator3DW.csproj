@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syroot.IO.BinaryData" Version="2.0.1" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Hack.io">
+      <HintPath>..\Kaizo 3DW Porter\dll\Hack.io.dll</HintPath>
+    </Reference>
+    <Reference Include="Hack.io.YAZ0">
+      <HintPath>..\Kaizo 3DW Porter\dll\Hack.io.YAZ0.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
