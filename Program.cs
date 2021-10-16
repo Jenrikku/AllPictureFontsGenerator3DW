@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Text;
-using Hack.io.YAZ0;
-using SZS;
+using EveryFileExplorer;
+using SARCExt;
 
 namespace AllPictureFontsGenerator3DW {
     class Program {
@@ -41,15 +41,11 @@ namespace AllPictureFontsGenerator3DW {
                     // Replaces the font on the RAM.
                     currentData.Files["PictureFont80.bffnt"] = File.ReadAllBytes(BFFNTPath);
 
-                    // Stores the szs
-                    MemoryStream uncompressed = new MemoryStream(SARC.PackN(currentData).Item2);
-
                     Directory.CreateDirectory(Path.Join(OutputPath, "LocalizedData\\", dir.Name, "LayoutData\\"));
 
                     File.WriteAllBytes(
-                        Path.Join(OutputPath, "LocalizedData\\", dir.Name, "LayoutData\\", "FontData.szs"), YAZ0.Compress(uncompressed));
-
-                    uncompressed.Close();
+                        Path.Join(OutputPath, "LocalizedData\\", dir.Name, "LayoutData\\", "FontData.szs"), 
+                        YAZ0.Compress(SARC.PackN(currentData).Item2, 3, (uint)SARC.PackN(currentData).Item1));
                 }
             }
         }

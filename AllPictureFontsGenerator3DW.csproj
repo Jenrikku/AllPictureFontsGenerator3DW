@@ -11,11 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Hack.io">
-      <HintPath>..\Kaizo 3DW Porter\dll\Hack.io.dll</HintPath>
+    <Reference Include="EditorCoreCommon">
+      <HintPath>EditorCoreCommon.dll</HintPath>
     </Reference>
-    <Reference Include="Hack.io.YAZ0">
-      <HintPath>..\Kaizo 3DW Porter\dll\Hack.io.YAZ0.dll</HintPath>
+    <Reference Include="SARCExt">
+      <HintPath>SARCExt.dll</HintPath>
     </Reference>
   </ItemGroup>
 
